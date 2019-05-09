@@ -34,7 +34,7 @@ public class InnerSingleton {
 //
 //        testThread();
 
-        Class clazz =InnerSingleton.class;
+        Class<?> clazz =InnerSingleton.class;
 
         //构造方法
         Constructor constructor = clazz.getDeclaredConstructor(null);
