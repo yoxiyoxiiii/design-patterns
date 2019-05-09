@@ -9,7 +9,7 @@ public class DoubleCheckSingleton {
 
     private DoubleCheckSingleton() {
     }
-
+    //volatile 防止指令重排序 导致可能出现的线程安全问题
     private static volatile DoubleCheckSingleton doubleCheckSingleton = null;
 
     public static DoubleCheckSingleton getDoubleCheckSingleton() throws InterruptedException {
