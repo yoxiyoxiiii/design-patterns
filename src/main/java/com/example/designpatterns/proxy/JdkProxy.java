@@ -7,7 +7,24 @@ import java.lang.reflect.Proxy;
 /**
  * jdk 动态代理：必须要实现接口
  * 代理对象不需要实现接口,但是目标对象一定要实现接口,否则不能用动态代理
- */
+ * aop 的实现就是动态代理
+ * jdk 动态代理要求 目标类的实现的接口不能大于65535个
+ *  /**
+ *      * Generate a proxy class.  Must call the checkProxyAccess method
+ *      * to perform permission checks before calling this.
+ *      */
+// *private static Class<?> getProxyClass0(ClassLoader loader,
+//        *Class<?>...interfaces){
+//        *if(interfaces.length>65535){
+//        *throw new IllegalArgumentException("interface limit exceeded");
+//        *}
+//        *
+//        *         // If the proxy class defined by the given loader implementing
+//        *         // the given interfaces exists, this will simply return the cached copy;
+//        *         // otherwise, it will create the proxy class via the ProxyClassFactory
+//        *return proxyClassCache.get(loader,interfaces);
+//        *}
+// */
 public class JdkProxy implements InvocationHandler {
 
     //目标对象
