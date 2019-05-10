@@ -11,6 +11,7 @@ import java.lang.reflect.Method;
  * 使用Cglib 实现动态代理
  * 目标对象不需要实现接口
  * 实现 MethodInterceptor 接口
+ * aop 的实现就是动态代理
  */
 public class CglibProxy implements MethodInterceptor {
 
